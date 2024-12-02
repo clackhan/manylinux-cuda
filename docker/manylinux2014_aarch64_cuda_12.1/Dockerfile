@@ -32,10 +32,10 @@ RUN yum-config-manager --add-repo https://developer.download.nvidia.com/compute/
 RUN yum -y install cuda-compiler-${VER}.${ARCH} \
                    cuda-libraries-${VER}.${ARCH} \
                    cuda-libraries-devel-${VER}.${ARCH}
-RUN yum clean all
 
-RUN apt update
-RUN apt install gcc-10 g++-10
+RUN yum install devtoolset-10-gcc -y
+
+RUN yum clean all
 
 RUN rm -rf /var/cache/yum/*
 RUN echo "/usr/local/cuda/lib64" >> /etc/ld.so.conf.d/999_nvidia_cuda.conf
