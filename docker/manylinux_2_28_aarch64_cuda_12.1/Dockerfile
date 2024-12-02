@@ -32,6 +32,10 @@ RUN dnf -y install cuda-compiler-${VER}.${ARCH} \
                    cuda-libraries-${VER}.${ARCH} \
                    cuda-libraries-devel-${VER}.${ARCH}
 RUN dnf clean all
+
+RUN apt update
+RUN apt install gcc-10 g++-10
+
 RUN rm -rf /var/cache/dnf/*
 RUN echo "/usr/local/cuda/lib64" >> /etc/ld.so.conf.d/999_nvidia_cuda.conf
 
