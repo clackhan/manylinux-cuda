@@ -1,9 +1,9 @@
 name: deploy-docker-manylinux_2_34_x86_64_cuda_12.6
 
 on:
-    push:
-        branches:
-            - main
+    # push:
+    #     branches:
+    #         - main
     release:
         types: 
             - published
@@ -28,7 +28,7 @@ jobs:
               with:
                   push: true
                   file: ./docker/manylinux_2_34_x86_64_cuda_12.6/Dockerfile
-                  tags: sameli/manylinux_2_34_x86_64_cuda_12.6:latest
+                  tags: clack2024/manylinux_2_34_x86_64_cuda_12.6:latest
 
             - name: Image digest
               run: echo ${{ steps.docker_build.outputs.digest }}
@@ -51,7 +51,7 @@ jobs:
                 newgrp docker
 
             - name: Pull Docker Image
-              run: docker pull sameli/manylinux_2_34_x86_64_cuda_12.6
+              run: docker pull clack2024/manylinux_2_34_x86_64_cuda_12.6
 
             - name: Run Docker Image
-              run: docker run -t sameli/manylinux_2_34_x86_64_cuda_12.6 nvcc --version
+              run: docker run -t clack2024/manylinux_2_34_x86_64_cuda_12.6 nvcc --version

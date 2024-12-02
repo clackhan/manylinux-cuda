@@ -29,7 +29,7 @@ jobs:
               with:
                   push: true
                   file: ./docker/manylinux_2_28_x86_64_cuda_12.4/Dockerfile
-                  tags: sameli/manylinux_2_28_x86_64_cuda_12.4:latest
+                  tags: clack2024/manylinux_2_28_x86_64_cuda_12.4:latest
 
             - name: Image digest
               run: echo ${{ steps.docker_build.outputs.digest }}
@@ -52,7 +52,7 @@ jobs:
                 newgrp docker
 
             - name: Pull Docker Image
-              run: docker pull sameli/manylinux_2_28_x86_64_cuda_12.4
+              run: docker pull clack2024/manylinux_2_28_x86_64_cuda_12.4
 
             - name: Run Docker Image
-              run: docker run -t sameli/manylinux_2_28_x86_64_cuda_12.4 nvcc --version
+              run: docker run -t clack2024/manylinux_2_28_x86_64_cuda_12.4 nvcc --version
