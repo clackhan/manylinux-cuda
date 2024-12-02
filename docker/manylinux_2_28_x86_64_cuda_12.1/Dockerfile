@@ -32,7 +32,7 @@ RUN dnf -y install cuda-compiler-${VER}.${ARCH} \
                    cuda-libraries-${VER}.${ARCH} \
                    cuda-libraries-devel-${VER}.${ARCH}
 
-RUN dnf install gcc-toolset-10
+RUN dnf -y install gcc-toolset-10
 RUN dnf clean all
 
 RUN rm -rf /var/cache/dnf/*
