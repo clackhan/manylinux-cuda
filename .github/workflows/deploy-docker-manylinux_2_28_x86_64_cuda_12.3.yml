@@ -8,6 +8,12 @@ on:
     #     types: 
     #         - published
     workflow_dispatch:
+      inputs:
+        source_tag:
+          type: string
+          default: "2024.07.18-1"
+          required: true
+          description: ""
 
 jobs:
   build_docker:

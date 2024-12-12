@@ -15,7 +15,9 @@
 # Choose base image
 # -----------------
 
-FROM quay.io/pypa/manylinux_2_28_aarch64:2024.11.30-1
+ARG TAG=2024.11.30-1
+
+FROM quay.io/pypa/manylinux_2_28_aarch64:${TAG}
 
 MAINTAINER Siavash Ameli <samei@berkeley.edu>
 LABEL Description="manylinux_2_28_aarch64 with cuda 12.4"
