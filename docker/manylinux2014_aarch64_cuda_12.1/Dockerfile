@@ -15,7 +15,7 @@
 # Choose base image
 # -----------------
 
-FROM quay.io/pypa/manylinux2014_aarch64
+FROM quay.io/pypa/manylinux2014_aarch64:2024.11.30-1
 
 MAINTAINER Siavash Ameli <samei@berkeley.edu>
 LABEL Description="manylinux2014_aarch64 with cuda 12.1"

@@ -15,7 +15,7 @@
 # Choose base image
 # -----------------
 
-FROM quay.io/pypa/manylinux_2_34_x86_64
+FROM quay.io/pypa/manylinux_2_34_x86_64:2024.11.30-1
 
 MAINTAINER Siavash Ameli <samei@berkeley.edu>
 LABEL Description="manylinux_2_34_x86_64 with cuda 12.6"
