@@ -15,7 +15,7 @@
 # Choose base image
 # -----------------
 
-ARG TAG=2024-05-12-37b0e30
+ARG TAG=2024.07.18-1
 
 FROM quay.io/pypa/manylinux2014_x86_64:${TAG}
 

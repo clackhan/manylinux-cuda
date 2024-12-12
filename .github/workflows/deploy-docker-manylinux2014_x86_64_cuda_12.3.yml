@@ -11,7 +11,7 @@ on:
       inputs:
         source_tag:
           type: string
-          default: "2024-05-12-37b0e30"
+          default: "2024.07.18-1"
           required: true
           description: ""
 
