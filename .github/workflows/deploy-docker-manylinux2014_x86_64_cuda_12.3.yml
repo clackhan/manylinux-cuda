@@ -36,7 +36,7 @@ jobs:
                   push: true
                   file: ./docker/manylinux2014_x86_64_cuda_12.3/Dockerfile
                   tags: clack2024/manylinux2014_x86_64_cuda_12.3:latest
-                  build-args: TAG=${{ inputs.2024-05-12-37b0e30 }}
+                  build-args: TAG=${{ inputs.source_tag }}
 
             - name: Image digest
               run: echo ${{ steps.docker_build.outputs.digest }}
