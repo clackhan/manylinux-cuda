@@ -15,6 +15,8 @@
 # Choose base image
 # -----------------
 
+ARG TAG=2024-05-12-37b0e30
+
 FROM quay.io/pypa/manylinux2014_x86_64:2024-05-12-37b0e30
 
 MAINTAINER Siavash Ameli <samei@berkeley.edu>

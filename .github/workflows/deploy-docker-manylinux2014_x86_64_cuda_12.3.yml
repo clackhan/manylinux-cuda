@@ -8,6 +8,12 @@ on:
     #     types: 
     #         - published
     workflow_dispatch:
+      inputs:
+        source_tag:
+          type: string
+          default: "2024-05-12-37b0e30"
+          required: true
+          description: ""
 
 jobs:
   build_docker:
@@ -30,6 +36,7 @@ jobs:
                   push: true
                   file: ./docker/manylinux2014_x86_64_cuda_12.3/Dockerfile
                   tags: clack2024/manylinux2014_x86_64_cuda_12.3:latest
+                  build-args: TAG=${{ inputs.2024-05-12-37b0e30 }}
 
             - name: Image digest
               run: echo ${{ steps.docker_build.outputs.digest }}
